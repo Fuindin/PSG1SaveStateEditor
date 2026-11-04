@@ -17,6 +17,13 @@ It edits:
 It also **displays** each character's equipped gear and learned magic. It always writes a new
 **`*_edited.p2s`** file and never modifies your original.
 
+## Download
+
+Grab **`PSG1SaveStateEditor.zip`** from this repository, extract it anywhere, and run
+`PSG1SaveStateEditor.exe`. It needs the
+[.NET 10 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/10.0) (Windows x64).
+Keep the `portraits` folder and the two `.json` files next to the exe.
+
 ## Usage
 
 1. `File ▸ Open…` and pick `PhantasyStarGeneration1.p2s`.
