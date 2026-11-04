@@ -86,10 +86,35 @@ public static class Psg1Items
     }
 }
 
-/// <summary>Spell-ID → name table (display only). Names come from <c>psg1_spells.json</c>.</summary>
+/// <summary>
+/// Spell-ID → name table (display only), confirmed by matching each character's in-RAM
+/// spell list against the MAGIC panel of the Status screen (ids are stored ascending and
+/// shown left-to-right, top-to-bottom). Extend/override via <c>psg1_spells.json</c>.
+/// </summary>
 public static class Psg1Spells
 {
-    public static IReadOnlyDictionary<int, string> Names { get; } = JsonNames.Load("psg1_spells.json");
+    private static readonly Dictionary<int, string> BuiltIn = new()
+    {
+        { 0x01, "Heal" },     { 0x02, "Raheal" },   { 0x03, "Giheal" },   { 0x04, "Doheal" },
+        { 0x05, "Curala" },   { 0x06, "Rebirth" },  { 0x07, "Warla" },    { 0x08, "Muwarla" },
+        { 0x09, "Flaeli" },   { 0x0A, "Giflaeli" }, { 0x0B, "Hewn" },     { 0x0C, "Gihewn" },
+        { 0x0D, "Tandre" },   { 0x0E, "Gitandre" }, { 0x0F, "Frozhe" },   { 0x11, "Bindwa" },
+        { 0x12, "Hypnos" },   { 0x13, "Silence" },  { 0x15, "Lucsta" },   { 0x16, "Powma" },
+        { 0x17, "Telele" },   { 0x18, "Rapt" },     { 0x19, "Surut" },    { 0x1A, "Tolupa" },
+    };
+
+    public static IReadOnlyDictionary<int, string> Names { get; } = LoadMerged();
+
+    private static Dictionary<int, string> LoadMerged()
+    {
+        var map = new Dictionary<int, string>(BuiltIn);
+        foreach (var (id, name) in JsonNames.Load("psg1_spells.json"))
+        {
+            map[id] = name;
+        }
+
+        return map;
+    }
 
     public static string Name(int id) =>
         Names.TryGetValue(id, out var n) ? n : $"Spell #0x{id:X2}";

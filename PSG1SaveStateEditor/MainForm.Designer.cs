@@ -217,7 +217,7 @@ partial class MainForm
         _lblMeseta.Name = "_lblMeseta";
         _lblMeseta.Size = new Size(69, 25);
         _lblMeseta.TabIndex = 0;
-        _lblMeseta.Text = "MESETA";
+        _lblMeseta.Text = "MONEY";
         //
         // _numMeseta
         //

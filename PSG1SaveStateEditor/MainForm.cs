@@ -705,7 +705,7 @@ public sealed partial class MainForm : Form
         }
 
         _spellList.EndUpdate();
-        _magicNote.Text = $"{spells.Count} spell(s) learned — read-only.  Name spell ids in psg1_spells.json next to the exe.";
+        _magicNote.Text = $"{spells.Count} spell(s) learned — read-only.";
     }
 
     // ---- Help -----------------------------------------------------------------

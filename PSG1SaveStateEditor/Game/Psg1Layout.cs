@@ -43,8 +43,8 @@ public sealed class Psg1Layout
     public int CharIdOffset { get; set; } = 0x04;
 
     /// <summary>
-    /// Absolute offset of the party meseta (u32). Candidate value found in the party header
-    /// just before the character array; not yet confirmed against an in-game number.
+    /// Absolute offset of the party meseta (u32), in the party header just before the
+    /// character array. Verified against the MAIN MENU "MONEY" readout (56302).
     /// </summary>
     public int MesetaOffset { get; set; } = 0x1910B0;
     public long MesetaMax { get; set; } = 999_999;

@@ -77,13 +77,28 @@ Name more items, without rebuilding, by editing **`psg1_items.json`** next to th
 Keys can be decimal or `0x`-hex. Unknown IDs show as `Item #0xNN`, and you can still add
 them by typing the hex ID.
 
+### Spell IDs
+
+Spells are stored in ascending ID order and shown on the Status screen left to right, top to
+bottom. These names were confirmed against Alisa's, Myau's and Lutz's MAGIC panels:
+
+| ID | Spell | ID | Spell | ID | Spell | ID | Spell |
+|----|-------|----|-------|----|-------|----|-------|
+| 0x01 | Heal | 0x07 | Warla | 0x0D | Tandre | 0x15 | Lucsta |
+| 0x02 | Raheal | 0x08 | Muwarla | 0x0E | Gitandre | 0x16 | Powma |
+| 0x03 | Giheal | 0x09 | Flaeli | 0x0F | Frozhe | 0x17 | Telele |
+| 0x04 | Doheal | 0x0A | Giflaeli | 0x11 | Bindwa | 0x18 | Rapt |
+| 0x05 | Curala | 0x0B | Hewn | 0x12 | Hypnos | 0x19 | Surut |
+| 0x06 | Rebirth | 0x0C | Gihewn | 0x13 | Silence | 0x1A | Tolupa |
+
+`psg1_spells.json` next to the exe can add or rename spells.
+
 ## Limits and not-yet-mapped
 
 * **Equipped items are locked.** The editor won't remove or swap gear that is equipped,
   so the bitmask stays consistent. Equip new gear in-game.
 * **Bag size** is capped at **10**, the largest bag seen in a real save. The record has
   room for 14; raise `ItemCapacity` in `psg1_layout.json` if the game accepts more.
-* **Spell names** are not mapped yet, so the MAGIC tab shows IDs. Name them in `psg1_spells.json`.
 * **Key items** (Road Pass, Passport, …) are not mapped yet.
 
 ## Project layout
