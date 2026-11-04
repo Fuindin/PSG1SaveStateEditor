@@ -91,12 +91,13 @@ bottom. These names were confirmed against Alisa's, Myau's and Lutz's MAGIC pane
 
 | ID | Spell | ID | Spell | ID | Spell | ID | Spell |
 |----|-------|----|-------|----|-------|----|-------|
-| 0x01 | Heal | 0x07 | Warla | 0x0D | Tandre | 0x15 | Lucsta |
-| 0x02 | Raheal | 0x08 | Muwarla | 0x0E | Gitandre | 0x16 | Powma |
-| 0x03 | Giheal | 0x09 | Flaeli | 0x0F | Frozhe | 0x17 | Telele |
-| 0x04 | Doheal | 0x0A | Giflaeli | 0x11 | Bindwa | 0x18 | Rapt |
-| 0x05 | Curala | 0x0B | Hewn | 0x12 | Hypnos | 0x19 | Surut |
-| 0x06 | Rebirth | 0x0C | Gihewn | 0x13 | Silence | 0x1A | Tolupa |
+| 0x01 | Heal | 0x08 | Muwarla | 0x0F | Frozhe | 0x16 | Powma |
+| 0x02 | Raheal | 0x09 | Flaeli | 0x10 | Rafrozhe | 0x17 | Telele |
+| 0x03 | Giheal | 0x0A | Giflaeli | 0x11 | Bindwa | 0x18 | Rapt |
+| 0x04 | Doheal | 0x0B | Hewn | 0x12 | Hypnos | 0x19 | Surut |
+| 0x05 | Curala | 0x0C | Gihewn | 0x13 | Silence | 0x1A | Tolupa |
+| 0x06 | Rebirth | 0x0D | Tandre | 0x15 | Lucsta | | |
+| 0x07 | Warla | 0x0E | Gitandre | | | | |
 
 `psg1_spells.json` next to the exe can add or rename spells.
 
