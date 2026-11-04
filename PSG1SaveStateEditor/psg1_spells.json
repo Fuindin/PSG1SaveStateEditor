@@ -1,0 +1,3 @@
+{
+  "_comment": "Spell-ID -> name map for the MAGIC tab. Keys may be decimal or 0x-hex. Alisa's learned ids are 0x01 0x05 0x09 0x11 0x12 0x15 0x1A (Heal, Curala, Flaeli, Bindwa, Hypnos, Lucsta, Tolupa in some order) - fill in once confirmed."
+}
